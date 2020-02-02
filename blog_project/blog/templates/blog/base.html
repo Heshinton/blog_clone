@@ -25,13 +25,13 @@
 
 
 <body class='loader'>
-
   <div class="row">
-    <nav class="navbar navbar-default techfont custom-navbar col-xs-6 col-lg-12">
+
+    <nav class="navbar navbar-default techfont custom-navbar col-xs-6 col-md-12">
 
 
 
-    <div class="container col-xs-6 col-lg-12">
+    <div class="container col-xs-6 col-md-12">
 
 
 
@@ -73,23 +73,23 @@
   </div>
 
 </nav>
-</div>
+
   {# The actual blog posts#}
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
+        <div class="content container col-xs-6 col-md-12">
+
+
                   <div class="blog_posts">
                     {% block content %}
                     {% endblock %}
 
                   </div>
 
-                </div>
+
             </div>
-        </div>
+
 
 {# SCRIPTS#}
-
+</div>
 <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
 
 </body>

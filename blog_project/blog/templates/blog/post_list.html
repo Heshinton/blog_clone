@@ -8,9 +8,9 @@
         <div class="post">
 
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <h2><li><a href="{{post.pk}}/">{{post.title}}  </a></li></h2>
+          
 
-        
+
             <div class="date">
                 <p>Published on: {{ post.published_date|date:"D M Y"}}</p>
             </div>
