@@ -38,7 +38,9 @@
                 <li><a href="{% url 'about'%}">About</a></li>
                 <li><a href="https://www.github.com">Github</a></li>
                 <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-                <li><a href="{% url 'signup'%}">Sign up</a></li>
+
+
+
 
               </ul>
 
@@ -59,6 +61,7 @@
               </li>
                 {% else %}
                 <li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="glyphicon glyphicon-user"></span></a></li>
+                  <li><a href="{% url 'signup'%}">Sign up</a></li>
               {% endif %}
             </ul>
 
