@@ -3,6 +3,10 @@ from django.contrib.auth.decorators import login_required
 from blog.models import Post, Comment
 from django.utils import timezone
 from blog.forms import PostForm, CommentForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, authenticate
+
+
 
 from django.views.generic import (TemplateView,ListView,
                                   DetailView,CreateView,
@@ -96,3 +100,17 @@ def comment_remove(request, pk):
     post_pk = comment.post.pk
     comment.delete()
     return redirect('post_detail', pk=post_pk)
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('post_list')
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
