@@ -25,7 +25,7 @@ SECRET_KEY = '$3niz$%sqb_!%xp69#3ktqt2y!l&1rpid(4&(9i1sn*bs3c2y8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hesh.pythonanywhere.com']
 
 
 # Application definition
